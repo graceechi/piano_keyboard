@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+    background: url(piano2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'Quicksand', monospace;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 5px 5px rgb(255, 255, 255), 1px 1px 0x rgb(255, 255, 255);
+    font-size: 1.8rem;
+}
+
+.keys {
+    background-color: transparent;
+    width: 50%;
+    height: 300px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgb(0,0,0);
+    border-radius: 15px;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-top: 2px solid rgba(255,255,255,0.5);
+    border-left: 2px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(4px);
+}
+
+button {
+    padding: 15px;
+    font-size: 1.3rem;
+    margin: 2px;
+    height: 170px;
+    cursor: pointer;
+}
+
+button:nth-of-type(even) {
+    background: black;
+    color: white;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 5px 5px wheat;
+}
+
+button.activated {
+    box-shadow: 0px 0px 5px 5px wheat;
+}
+
+.footer {
+    color: black;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:active, .footer a:visited {
+    color: black;
+}
+
+.footer a:hover {
+    color: rgb(239, 113, 10);
+}
+
+@media(max-width: 920px) {
+    .keys {
+        width: 90%;
+    }
+}
+
+@media(max-width: 800px) {
+    .keys {
+        width: 80%;
+    }
+    /* button {
+        width: 70px;
+    } */
+}
+
